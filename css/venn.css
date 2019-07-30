@@ -1,0 +1,242 @@
+#venn {
+  width: 65em;
+  margin: .5em auto;
+  padding: 1em;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #fff;
+  height: 40em;
+  font-size: 80%;
+
+}
+
+#venn span {
+  display: none;
+}
+
+.circle {
+  border: .2em solid #000;
+  border-radius: 50%;
+  width: 40em;
+  height: 35em;
+  text-align: center;
+  vertical-align: center;
+  position: absolute;
+}
+.circle > .term{
+  padding-bottom: 5px;
+}
+.circle p {
+  height: 5em;
+  width: 35em;
+  display: table-cell;
+  vertical-align: middle;
+   font-weight: bold;
+}
+
+#c1 {
+  top: 0;
+  left: 0;
+  background-color: rgba(255,0,0,.25);
+}
+
+#c1 > #collection{
+  max-width: 260px;
+  /*border: 1px solid red;*/
+  height: 400px;
+  margin-left: 75px;
+
+}
+
+#c2 {
+  top: 0;
+  left: 25em;
+  background-color: rgba(0,255,0,.25);
+}
+
+#c2 > #collection{
+  margin-left: 15em;
+  max-width: 250px;
+  /*border: 1px solid red;*/
+  height: 400px;
+}
+
+#c2 p {
+  padding-left: 5em;
+   font-weight: bold;
+}
+
+.joined {
+  position: absolute;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#j12 {
+  top: 2em;
+  left: 20em;
+  width: 25em;
+  height: 7em;
+  padding-top: 3em;
+   font-weight: bold;
+}
+
+#j12 > #collection{
+  /*border: 1px solid red;*/
+  max-width: 120px;
+  margin-left: 101px;
+  height: 300px;
+  font-weight: normal;
+}
+
+.terms_container{
+  border: 1px solid black;
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+}
+term{
+  padding: 1px 2px;
+  margin: 0 3px;
+  cursor: move;
+  display: inline-block;
+  border: 1px solid black;
+}
+table{
+  margin:0 auto;
+  max-width: 700px;
+}
+r{
+  color: green;
+  font-weight: bold;
+}
+wr{
+  color: red;
+  font-weight: bold;
+}
+h3{
+  text-align: center;
+  margin: 0 auto;
+}
+psy {width:225px; height: 400px; zoom: 25%; display: none; margin: 0 auto;
+  z-index: 2;
+  -moz-transform: scale(.25);
+  position: relative;
+  background-image: url(https://estelle.github.io/10/files/sprite.png);
+  -webkit-animation: gangham 4s steps(23,start) infinite,
+    movearound 12s steps(69,end) infinite 44ms;
+  animation: gangham 4s steps(23,start) infinite,
+    movearound 12s steps(69,end) infinite alternate 44ms;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+@-webkit-keyframes gangham {
+  0% {background-position: 0 0}
+  100% {background-position: -5175px 0}
+}
+@keyframes gangham {
+  0% {background-position: 0 0}
+  100% {background-position: -5175px 0}
+}
+@-webkit-keyframes movearound {
+  0% {-webkit-transform: translatex(0)}
+  100% {-webkit-transform: translatex(600px);}
+}
+
+@keyframes movearound {
+  0% {transform: translatex(0)}
+  100% {transform: translatex(600px);}
+}
+
+#replay{
+  display: none;
+  text-align: center;
+  margin-left: 45%;
+  color: black;
+  float:left;
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  cursor: pointer;
+
+}
+
+/*For the Restart Button*/
+
+
+button {
+  border:0;
+  margin:5px auto;
+  padding:0;
+  position:relative;
+  cursor:pointer;
+  font-size:1rem;
+  font-weight:bold;
+  color:rgba(0,0,0,0);
+  background:transparent;
+  border-radius:.25rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+button,
+button:after,
+button:before {
+  padding:.6875rem 2rem;
+  -webkit-transition:-webkit-transform 0.75s,background-color .125s;
+  -moz-transition:-moz-transform 0.75s,background-color .125s;
+  -ms-transition:-ms-transform 0.75s,background-color .125s;
+  transition:transform 0.75s,background-color .125s;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -ms-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+
+button:after,
+button:before {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  border-radius:.25rem;
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  backface-visibility:hidden;
+
+}
+
+button:before {
+  z-index:2;
+  color:#fff;
+  background-color:#3e87ec;
+  content:attr(data-label);
+}
+
+button:after {
+  z-index:1;
+  background-color:#999;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(data:image/gif;base64,R0lGODlhEAAQAPIAAJmZmf///7CwsOPj4////9fX18rKysPDwyH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQACgABACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkEAAoAAgAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkEAAoAAwAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkEAAoABAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQACgAFACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQACgAGACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAAKAAcALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==);
+  -webkit-transform:rotateX(180deg);
+  -moz-transform:rotateX(180deg);
+  -ms-transform:rotateX(180deg);
+  transform:rotateX(180deg);
+  content:'';
+}
+
+button:active:before {
+  background-color:#3571c8;
+}
+
+button.loading {
+  -webkit-transform:rotateX(180deg);
+  -moz-transform:rotateX(180deg);
+  -ms-transform:rotateX(180deg);
+  transform:rotateX(180deg);
+}
