@@ -145,25 +145,21 @@
         <section>
 
 
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	
 <table id="terms_container" frame="box" ondrop="drop(event)" ondragover="allowDrop(event)" >
   <tr ><td style="text-align:center;">Drag each of these items to the correct part of this Venn diagram.</td></tr>
   <tr><td class="box"><hr>
 
-    <term id="drag1" draggable="true" ondragstart="drag(event)">
-    Is software</term>
-    <term id="drag2" draggable="true" ondragstart="drag(event)">Operates the computer's hardware</term>
-    <term id="drag3" draggable="true" ondragstart="drag(event)">Helps the user to perform single or multiple tasks</term>
+    <term id="drag1" draggable="true" ondragstart="drag(event)">Software</term>
+    <term id="drag2" draggable="true" ondragstart="drag(event)">Apple</term>
+    <term id="drag3" draggable="true" ondragstart="drag(event)">bear</term>
     <term id="drag4" draggable="true" ondragstart="drag(event)">Provides a platform for running the applications</term>
-
     <term id="drag5" draggable="true" ondragstart="drag(event)">Windows XP</term>
     <term id="drag6" draggable="true" ondragstart="drag(event)">MacOS</term>
     <term id="drag7" draggable="true" ondragstart="drag(event)">Accounting Software</term>
-
-    <term id="drag8" draggable="true" ondragstart="drag(event)">Maintain the functionality of memory, accessory devices, printer, keyboards, and display screens</term>
-
+    <term id="drag8" draggable="true" ondragstart="drag(event)">Maintain</term>
     <term id="drag9" draggable="true" ondragstart="drag(event)">Normally is Compiled</term>
     <term id="drag10" draggable="true" ondragstart="drag(event)">Sometimes is Interpreted</term>
     </td></tr>
@@ -171,12 +167,12 @@
 <span id="replay"><button data-label="restart" onclick="restartgame();">restart</button></span>
 <div id="venn">
   <div id="c1" class="circle">
-    <p>Operating Systems</p>
+    <p>left video</p>
     <div id="collection" ondrop="drop(event)" ondragover="allowDrop(event)" class="ans1"></div>
   </div>
 
   <div id="c2" class="circle" >
-    <p>Application Software</p>
+    <p>Right Video</p>
     <div id="collection" ondrop="drop(event)" ondragover="allowDrop(event)" class="ans2"></div>
   </div>
 
